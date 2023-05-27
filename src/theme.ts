@@ -1,8 +1,6 @@
-import { extendTheme, ThemeConfig } from '@chakra-ui/react';
+import { extendTheme } from '@chakra-ui/react';
 
 // TODO
-const config: ThemeConfig = {};
+const config = {};
 
-const theme = extendTheme({ config });
-
-export default theme;
+export const theme = extendTheme(config);

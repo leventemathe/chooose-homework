@@ -1,7 +1,5 @@
-import { Box } from '@chakra-ui/react';
+import { CardsPage } from './pages/CardsPage';
 
-function App() {
-  return <Box>Hello!</Box>;
+export function App() {
+  return <CardsPage />;
 }
-
-export default App;
