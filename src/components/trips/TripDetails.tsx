@@ -1,3 +1,5 @@
+import { formatTripDetails } from 'textFormatters/formatCounts';
+
 import { Text } from '@chakra-ui/react';
 
 type TripDetailsProps = {
@@ -6,9 +8,7 @@ type TripDetailsProps = {
 };
 
 export function TripDetails({ dayCount, countryCount }: TripDetailsProps) {
-  const dayString = dayCount === 1 ? 'day' : 'days';
-  const countryString = countryCount === 1 ? 'country' : 'countries';
-  const text = `${countryCount} ${countryString}, ${dayCount} ${dayString}`;
+  const text = formatTripDetails(dayCount, countryCount);
 
   return (
     <Text fontSize={13} textAlign="center">

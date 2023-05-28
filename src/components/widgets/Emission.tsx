@@ -1,3 +1,5 @@
+import { formatEmission } from 'textFormatters/formatEmission';
+
 import { ChakraProps, Flex, Text } from '@chakra-ui/react';
 
 type EmissionProps = ChakraProps & {
@@ -5,9 +7,7 @@ type EmissionProps = ChakraProps & {
 };
 
 export function Emission({ emission, ...props }: EmissionProps) {
-  const emissionNumber = emission;
-  const emissionUnit = 'kg';
-  const emissionText = `${emissionNumber} ${emissionUnit} `;
+  const emissionText = formatEmission(emission);
 
   return (
     <Flex

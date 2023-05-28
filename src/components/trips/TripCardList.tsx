@@ -9,8 +9,8 @@ export function TripCardList() {
       title: 'European trip',
       dayCount: 12,
       countryCount: 5,
-      emission: 850,
-      rating: 4.8,
+      emission: 834,
+      rating: 4,
       image: 'https://source.unsplash.com/3lxrM5yvkcI/w=600',
     },
   ];

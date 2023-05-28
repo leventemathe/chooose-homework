@@ -10,6 +10,7 @@ export default defineConfig({
       pages: path.resolve('src/pages'),
       components: path.resolve('src/components'),
       models: path.resolve('src/models'),
+      textFormatters: path.resolve('src/textFormatters'),
     },
   }
 });
