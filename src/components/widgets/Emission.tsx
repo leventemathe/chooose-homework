@@ -18,8 +18,10 @@ export function Emission({ emission, ...props }: EmissionProps) {
       boxShadow="card"
       {...props}
     >
-      <Text>Emission offset:</Text>
-      <Text>
+      <Text fontWeight={600} fontSize={14}>
+        Emission offset:
+      </Text>
+      <Text fontWeight={600} fontSize={14}>
         <span>{emissionText}</span>
         <span>
           CO<sub>2</sub>e

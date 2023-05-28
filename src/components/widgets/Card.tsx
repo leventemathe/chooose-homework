@@ -17,6 +17,7 @@ const useCardStyles = (image: string) => {
       ${bgColor}),
       url(${image})`,
     bgSize: 'cover',
+    boxShadow: 'card',
   };
 };
 

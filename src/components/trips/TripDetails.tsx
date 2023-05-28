@@ -10,5 +10,9 @@ export function TripDetails({ dayCount, countryCount }: TripDetailsProps) {
   const countryString = countryCount === 1 ? 'country' : 'countries';
   const text = `${countryCount} ${countryString}, ${dayCount} ${dayString}`;
 
-  return <Text textAlign="center">{text}</Text>;
+  return (
+    <Text fontSize={13} textAlign="center">
+      {text}
+    </Text>
+  );
 }
