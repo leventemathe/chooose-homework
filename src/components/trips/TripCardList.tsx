@@ -3,9 +3,11 @@ import { useTrips } from 'dataSources/trips/useTrips';
 import { Grid, Text } from '@chakra-ui/react';
 
 import { TripCard } from './TripCard';
+import { TripControls } from './TripControls';
 
 export function TripCardList() {
   const { trips, isLoading, error } = useTrips();
+  const lastTripId = trips?.at(-1)?.id;
 
   if (isLoading) {
     return <Text>Loading...</Text>;
@@ -31,6 +33,12 @@ export function TripCardList() {
       {trips?.map((trip) => (
         <TripCard key={trip.id} trip={trip} />
       ))}
+      <TripControls
+        position="fixed"
+        right={10}
+        bottom={10}
+        lastTripId={lastTripId}
+      />
     </Grid>
   );
 }

@@ -1,10 +1,12 @@
-export type Trip = {
-  id: string;
+export type CreateTrip = {
   image: string;
   title: string;
   countryCount: number;
   dayCount: number;
   emission: number;
   rating: number;
-  createdAt: Date;
+};
+
+export type Trip = CreateTrip & {
+  id: string;
 };

@@ -8,7 +8,7 @@ type TripDetailsProps = {
 };
 
 export function TripDetails({ dayCount, countryCount }: TripDetailsProps) {
-  const text = formatTripDetails(dayCount, countryCount);
+  const text = formatTripDetails(countryCount, dayCount);
 
   return (
     <Text fontSize={13} textAlign="center">

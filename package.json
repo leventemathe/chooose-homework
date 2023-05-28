@@ -11,8 +11,10 @@
     "build": "tsc && vite build",
     "serve": "vite preview",
     "lint": "eslint src --ext .tsx --ext .ts",
+    "type-check": "tsc --noEmit",
     "test": "jest --colors --passWithNoTests",
-    "test:watch": "yarn test --collectCoverage=false --watch"
+    "test:watch": "yarn test --collectCoverage=false --watch",
+    "validate": "yarn lint && yarn type-check && yarn test"
   },
   "dependencies": {
     "@chakra-ui/icons": "^2.0.17",

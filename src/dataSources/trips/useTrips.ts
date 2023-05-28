@@ -1,9 +1,8 @@
-import { firebaseApp } from 'dataSources/firebase';
-import { collection, getFirestore, orderBy, query } from 'firebase/firestore';
+import { tripCollection } from 'dataSources/firebase';
+import { orderBy, query } from 'firebase/firestore';
 import { Trip } from 'models/Trip';
 import { useCollection } from 'react-firebase-hooks/firestore';
 
-const tripCollection = collection(getFirestore(firebaseApp), 'trips');
 // we could add pagination here (limit & startAt)
 const tripQuery = query(tripCollection, orderBy('createdAt'));
 
@@ -19,7 +18,6 @@ export function useTrips() {
     return {
       id: doc.id,
       ...data,
-      createdAt: new Date(data.createdAt.seconds * 1000),
     };
   }) as Trip[] | null;
 
