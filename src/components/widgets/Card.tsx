@@ -1,7 +1,7 @@
 import { PropsWithChildren } from 'react';
 import { MyTheme } from 'theme';
 
-import { Center, useTheme } from '@chakra-ui/react';
+import { Center, ChakraProps, useTheme } from '@chakra-ui/react';
 
 const useCardStyles = (image: string) => {
   const theme = useTheme() as MyTheme;
@@ -21,12 +21,17 @@ const useCardStyles = (image: string) => {
   };
 };
 
-type CardProps = PropsWithChildren<{
-  image: string;
-}>;
+type CardProps = ChakraProps &
+  PropsWithChildren<{
+    image: string;
+  }>;
 
-export function Card({ children, image }: CardProps) {
+export function Card({ children, image, ...props }: CardProps) {
   const cardStyles = useCardStyles(image);
 
-  return <Center sx={cardStyles}>{children}</Center>;
+  return (
+    <Center sx={cardStyles} {...props}>
+      {children}
+    </Center>
+  );
 }

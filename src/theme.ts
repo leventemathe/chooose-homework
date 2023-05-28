@@ -6,6 +6,7 @@ const overrides = {
   },
   colors: {
     emission: '#282928',
+    star: '#fbd600',
   },
   shadows: {
     card: '0 1px 3px 1px rgba(0, 0, 0, 0.3)',
