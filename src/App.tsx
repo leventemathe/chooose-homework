@@ -1,5 +1,5 @@
-import { CardsPage } from './pages/CardsPage';
+import { TripsPage } from 'pages/TripsPage';
 
 export function App() {
-  return <CardsPage />;
+  return <TripsPage />;
 }
