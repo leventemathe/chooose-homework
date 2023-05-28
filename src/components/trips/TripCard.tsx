@@ -18,7 +18,9 @@ export function TripCard({ trip }: TripCardProps) {
     <Card image={image} position="relative">
       <VStack spacing={3} w="100%" alignItems="center">
         <VStack spacing={0}>
-          <Heading textAlign="center">{title}</Heading>
+          <Heading fontSize={24} textAlign="center">
+            {title}
+          </Heading>
           <TripDetails dayCount={dayCount} countryCount={countryCount} />
         </VStack>
         <Emission emission={emission} w="80%" />

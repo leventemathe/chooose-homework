@@ -28,14 +28,12 @@ export function StarRating({ max, rating, ...props }: StarRatingProps) {
   const stars = getStars(max, Number(formattedRating));
 
   return (
-    <HStack {...props}>
-      <HStack>
-        {stars.map((star, index) => (
-          // index is fine, we're nor changing the amount of stars
-          // eslint-disable-next-line react/no-array-index-key
-          <StarIcon key={index} star={star} />
-        ))}
-      </HStack>
+    <HStack spacing={1} alignItems="center" {...props}>
+      {stars.map((star, index) => (
+        // index is fine, we're nor changing the amount of stars
+        // eslint-disable-next-line react/no-array-index-key
+        <StarIcon key={index} star={star} />
+      ))}
       <Text fontWeight={600}>{formattedRating}</Text>
     </HStack>
   );
