@@ -1,6 +1,17 @@
 import { extendTheme } from '@chakra-ui/react';
 
 const overrides = {
+  config: {
+    initialColorMode: 'dark',
+    useSystemColorMode: false,
+  },
+  styles: {
+    global: {
+      'html, body': {
+        bg: '#f6f7f9',
+      },
+    },
+  },
   borders: {
     card: '10px solid white',
   },
@@ -12,7 +23,7 @@ const overrides = {
     },
   },
   shadows: {
-    card: '0 1px 3px 1px rgba(0, 0, 0, 0.3)',
+    card: '0 2px 8px 0 rgba(0, 0, 0, 0.3)',
   },
 };
 
