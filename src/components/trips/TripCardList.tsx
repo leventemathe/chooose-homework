@@ -15,7 +15,19 @@ export function TripCardList() {
   }
 
   return (
-    <Grid>
+    <Grid
+      w="100%"
+      p={[4, 8, 8, 12]}
+      templateColumns={[
+        'repeat(1, 1fr)',
+        'repeat(1, 1fr)',
+        'repeat(2, 1fr)',
+        'repeat(2, 1fr)',
+        'repeat(3, 1fr)',
+        'repeat(4, 1fr)',
+      ]}
+      gap={[8, 12]}
+    >
       {trips?.map((trip) => (
         <TripCard key={trip.id} trip={trip} />
       ))}

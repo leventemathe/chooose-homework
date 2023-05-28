@@ -28,7 +28,7 @@ export function StarRating({ max, rating, ...props }: StarRatingProps) {
   const stars = getStars(max, Number(formattedRating));
 
   return (
-    <HStack spacing={1} alignItems="center" {...props}>
+    <HStack spacing={[0, 1]} alignItems="center" {...props}>
       {stars.map((star, index) => (
         // index is fine, we're nor changing the amount of stars
         // eslint-disable-next-line react/no-array-index-key

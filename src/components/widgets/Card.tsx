@@ -8,7 +8,6 @@ const useCardStyles = (image: string) => {
   const bgColor = theme.colors.blackAlpha[700];
 
   return {
-    w: 400,
     h: 300,
     border: 'card',
     borderRadius: '3xl',
