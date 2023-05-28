@@ -1,3 +1,5 @@
+import { Grid } from '@chakra-ui/react';
+
 import { TripCard } from './TripCard';
 
 export function TripCardList() {
@@ -14,10 +16,10 @@ export function TripCardList() {
   ];
 
   return (
-    <>
+    <Grid>
       {trips.map((trip) => (
         <TripCard key={trip.id} trip={trip} />
       ))}
-    </>
+    </Grid>
   );
 }

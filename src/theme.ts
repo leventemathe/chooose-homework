@@ -1,6 +1,16 @@
 import { extendTheme } from '@chakra-ui/react';
 
-// TODO
-const config = {};
+const overrides = {
+  borders: {
+    card: '10px solid white',
+  },
+  colors: {
+    emission: '#282928',
+  },
+  shadows: {
+    card: '0 1px 3px 1px rgba(0, 0, 0, 0.3)',
+  },
+};
 
-export const theme = extendTheme(config);
+export const theme = extendTheme(overrides);
+export type MyTheme = typeof theme;
