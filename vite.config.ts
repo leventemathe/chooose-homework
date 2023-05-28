@@ -11,6 +11,7 @@ export default defineConfig({
       components: path.resolve('src/components'),
       models: path.resolve('src/models'),
       textFormatters: path.resolve('src/textFormatters'),
+      dataSources: path.resolve('src/dataSources'),
     },
   }
 });

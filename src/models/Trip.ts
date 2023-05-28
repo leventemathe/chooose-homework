@@ -6,4 +6,5 @@ export type Trip = {
   dayCount: number;
   emission: number;
   rating: number;
+  createdAt: Date;
 };

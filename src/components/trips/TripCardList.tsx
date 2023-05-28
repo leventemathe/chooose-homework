@@ -1,23 +1,22 @@
-import { Grid } from '@chakra-ui/react';
+import { useTrips } from 'dataSources/trips/useTrips';
+
+import { Grid, Text } from '@chakra-ui/react';
 
 import { TripCard } from './TripCard';
 
 export function TripCardList() {
-  const trips = [
-    {
-      id: 'asd',
-      title: 'European trip',
-      dayCount: 12,
-      countryCount: 5,
-      emission: 834,
-      rating: 4,
-      image: 'https://source.unsplash.com/3lxrM5yvkcI/w=600',
-    },
-  ];
+  const { trips, isLoading, error } = useTrips();
+
+  if (isLoading) {
+    return <Text>Loading...</Text>;
+  }
+  if (error) {
+    return <Text>{error.message}</Text>;
+  }
 
   return (
     <Grid>
-      {trips.map((trip) => (
+      {trips?.map((trip) => (
         <TripCard key={trip.id} trip={trip} />
       ))}
     </Grid>
