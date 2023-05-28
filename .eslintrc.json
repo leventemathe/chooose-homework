@@ -43,7 +43,7 @@
     "react/jsx-props-no-spreading": "off",
     "linebreak-style": "off",
     "eol-last": "off",
-    "max-len": ["warn", { "code": 80 }],
+    "max-len": ["warn", { "code": 120 }],
     "import/extensions": ["error", "never", { "svg": "always" }],
     "prettier/prettier": [
       "error",
@@ -78,6 +78,20 @@
     ],
     "import/no-default-export": "error",
     "import/prefer-default-export": "off",
-    "react/require-default-props": "off"
+    "react/require-default-props": "off",
+    "import/no-extraneous-dependencies": [
+      "error",
+      {
+        "devDependencies": [
+          "test.{ts,tsx}",
+          "test-*.{ts,tsx}",
+          "**/*{.,_}{test,spec}.{ts,tsx}",
+          "**/jest.config.ts",
+          "**/jest.setup.ts",
+          "**/setupTests.ts"
+        ],
+        "optionalDependencies": false
+      }
+    ]
   }
 }

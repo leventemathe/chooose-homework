@@ -22,7 +22,7 @@ export function Emission({ emission, ...props }: EmissionProps) {
         Emission offset:
       </Text>
       <Text fontWeight={600} fontSize={14}>
-        <span>{emissionText}</span>
+        <span>{`${emissionText} `}</span>
         <span>
           CO<sub>2</sub>e
         </span>
