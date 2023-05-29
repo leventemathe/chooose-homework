@@ -3,7 +3,7 @@
 A FE task for Chooose.  
 The app lists trips in a card list view.  
 A random new trip can be added using the plus button in the bottom right, this will add a random trip from a predefined list.
-Tha latest trip can be deleted by pressing the trash icon in the bottom left.
+Tha latest trip can be deleted by pressing the trash icon in the bottom right.
 
 ## How to run it
 
